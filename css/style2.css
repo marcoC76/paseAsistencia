@@ -1,0 +1,11 @@
+body{
+  background-color: rgb(49, 48, 48);
+}
+.card{
+  border-radius: 10px;
+  margin-bottom: 7.5%;
+}
+.card-title{
+  font-size: 1.1em !important;
+  
+}
