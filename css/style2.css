@@ -1,11 +1,52 @@
-body{
+body {
   background-color: rgb(49, 48, 48);
 }
-.card{
+
+.card {
   border-radius: 10px;
   margin-bottom: 7.5%;
+  margin-bottom: 7.5%;
 }
-.card-title{
+
+.card-title {
   font-size: 1.1em !important;
-  
+  font-weight: bold !important;
+}
+
+.usado {
+  pointer-events: none;
+  background-color: rgb(43, 43, 43) !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+  transition: 1s ease-in-out;
+}
+
+.btn-floating i {
+  color: #000;
+  font-size: 2rem;
+  transition: 1s ease-in-out;
+}
+
+.badge {
+  background-color: #455a64 !important;
+}
+
+.datos {
+  background-color: #311b92 !important;
+}
+
+
+.tabs.tabs-transparent .tab a:hover, .tabs .tab a.active {
+  background-color: #1616165b !important;
+  color: #fff !important;
+}
+
+.tabs.tabs-transparent .tab a {
+  color: #ffffffa9 !important;
+}
+
+.tabs.tabs-transparent .indicator {
+  height: 3px;
+  background-color: #000000 !important;
 }
