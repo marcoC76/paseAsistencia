@@ -4,8 +4,14 @@ var salidaB = '';
 var salidaC = '';
 var salidaD = '';
 var valor;
+var lista;
+var appi; /*  = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec"; */
 
-var appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
+var url;
+/*  =
+    "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec"; */
+
+
 
 /* console.log(obj);
 console.log(obj.length); */
@@ -30,18 +36,20 @@ function ft(appi) {
 
 
 function pintar() {
-    var lista = JSON.parse(localStorage.getItem("obj"));
-   
+    
+    
+    lista = JSON.parse(localStorage.getItem("obj"));
+    console.log(lista);
     var newArrayA = lista.filter(function (el) {
         return (el.GRUPO === "A");
     });
-   /*  console.log(newArrayA); */
+    /*  console.log(newArrayA); */
     /* console.log(lista); */
     newArrayA.forEach(e => {
 
-
-        salidaA = salidaA + `
-       <div class="col s12 m6 l6">
+        
+        salidaA = salidaA + ` 
+       <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
@@ -68,7 +76,7 @@ function pintar() {
        `;
     });
 
-    document.getElementById("test1").innerHTML = salidaA;
+    document.getElementById("test_1").innerHTML = salidaA;
 
     var newArrayB = lista.filter(function (el) {
         return (el.GRUPO === "B");
@@ -79,7 +87,7 @@ function pintar() {
 
 
         salidaB = salidaB + `
-       <div class="col s12 m6 l6">
+       <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
@@ -106,7 +114,7 @@ function pintar() {
        `;
     });
 
-    document.getElementById("test2").innerHTML = salidaB;
+    document.getElementById("test_2").innerHTML = salidaB;
 
 
     var newArrayC = lista.filter(function (el) {
@@ -118,7 +126,7 @@ function pintar() {
 
 
         salidaC = salidaC + `
-       <div class="col s12 m6 l6">
+       <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
@@ -134,8 +142,11 @@ function pintar() {
                         class="material-icons" >
                         add
                     </i>
+                    
                 </a>
+              
                 </div>
+                
                <!-- <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
     
@@ -145,7 +156,7 @@ function pintar() {
        `;
     });
 
-    document.getElementById("test3").innerHTML = salidaC;
+    document.getElementById("test_3").innerHTML = salidaC;
 
 
     var newArrayD = lista.filter(function (el) {
@@ -157,7 +168,7 @@ function pintar() {
 
 
         salidaD = salidaD + `
-       <div class="col s12 m6 l6">
+       <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
@@ -184,12 +195,47 @@ function pintar() {
        `;
     });
 
-    document.getElementById("test4").innerHTML = salidaD;
+    document.getElementById("test_4").innerHTML = salidaD;
 
     console.log("Se pinto la info");
 }
 
+function periodo(num) {
+    
+    if (num == 1) {
+        appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
+        url =
+            "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
+        document.getElementById("brand-logo").innerHTML = `Periodo 1`;
+        ft(appi);
+       
+       
 
+    } else if (num == 2) {
+        
+        appi = "https://script.google.com/macros/s/AKfycbw87NkQkEsYqVCxJG4Peb78H03REvBrThoiLE04WQJ4bwhDxUJn/exec";
+        url =
+            "https://script.google.com/macros/s/AKfycbwYKAPn4uJiPDjdKNLZw3azVSngxxiaoAhFs4UHnUjXFPDevYk/exec";
+
+        document.getElementById("brand-logo").innerHTML = `Periodo 2 `;
+        
+        ft(appi);
+        
+
+    } else if (num == 3) {
+        appi = "https://script.google.com/macros/s/AKfycbwKs2Cs54-u_hpYg87lB50lO6SEct5DeHUr_BsTo4DGNZSgRIY/exec";
+        url =
+            "https://script.google.com/macros/s/AKfycbz2gNe8rtLII0sRg9h7SCRHjvMBEokiwa89e4h-wnc2ovLioys/exec";
+
+        document.getElementById("brand-logo").innerHTML = `Periodo 3`;
+        ft(appi);
+        
+    }
+
+
+
+
+}
 
 function envia(c, n, e, g, i, a) {
 
@@ -203,8 +249,7 @@ function envia(c, n, e, g, i, a) {
     console.log(g);
     console.log(i); */
 
-    var url =
-        "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
+
 
     envioUrl = url + "?Fecha=" + hoy.substring(1, 11) + hora + "&Completo=" + c.replace(/ /g, "_") + "&Nick=" + n.replace(/ /g, "_") + "&Equipo=" + e + "&Grupo=" + g + "&ID=" + i;
 
@@ -236,4 +281,12 @@ function getLogoffTime() {
     var Seconds = ((now.getSeconds() < 10) ? ":0" : ":") + now.getSeconds();
     OffTimeValue = ("_" + Hours + Minutes + Seconds + "_" + ampm);
     return OffTimeValue;
+}
+
+function limpiar() {
+    document.getElementById("botones").innerHTML = "";
+    /* document.getElementById("test_2").innerHTML = "";
+    document.getElementById("test_3").innerHTML = "";
+    document.getElementById("test_4").innerHTML = ""; */
+    
 }

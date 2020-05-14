@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(49, 48, 48);
+  background-color: rgb(255, 255, 255);
 }
 
 .card {
@@ -36,7 +36,6 @@ body {
   background-color: #311b92 !important;
 }
 
-
 .tabs.tabs-transparent .tab a:hover, .tabs .tab a.active {
   background-color: #1616165b !important;
   color: #fff !important;
@@ -49,4 +48,9 @@ body {
 .tabs.tabs-transparent .indicator {
   height: 3px;
   background-color: #000000 !important;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
