@@ -202,7 +202,7 @@ function pintar() {
 
 function periodo(num) {
     
-    if (num == 1) {
+    if (num === 1) {
         appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
         url =
             "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
@@ -211,18 +211,17 @@ function periodo(num) {
        
        
 
-    } else if (num == 2) {
+    } else if (num === 2) {
         
         appi = "https://script.google.com/macros/s/AKfycbw87NkQkEsYqVCxJG4Peb78H03REvBrThoiLE04WQJ4bwhDxUJn/exec";
         url =
             "https://script.google.com/macros/s/AKfycbwYKAPn4uJiPDjdKNLZw3azVSngxxiaoAhFs4UHnUjXFPDevYk/exec";
 
-        document.getElementById("brand-logo").innerHTML = `Periodo 2 `;
-        
+        document.getElementById("brand-logo").innerHTML = `Periodo 2`;
         ft(appi);
         
 
-    } else if (num == 3) {
+    } else if (num === 3) {
         appi = "https://script.google.com/macros/s/AKfycbwKs2Cs54-u_hpYg87lB50lO6SEct5DeHUr_BsTo4DGNZSgRIY/exec";
         url =
             "https://script.google.com/macros/s/AKfycbz2gNe8rtLII0sRg9h7SCRHjvMBEokiwa89e4h-wnc2ovLioys/exec";
@@ -268,7 +267,7 @@ function envia(c, n, e, g, i, a) {
 }
 
 var limpiarContenido = function () {
-    document.getElementById("contenido").style.display = "none";
+    document.getElementById("contenido").innerHTML = "";
 
 }
 

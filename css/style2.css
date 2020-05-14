@@ -54,3 +54,7 @@ body {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
+
+iframe{
+  display: none;
+}
