@@ -11,7 +11,9 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="images/icons/icon-72x72.png">
 
 </head>
 
@@ -37,9 +39,9 @@
       </div>
     </nav>
   </div> -->
-  <div id="navbar"  class="navbar-fixed ">
-    <nav  class="nav-extended" class="" role="navigation">
-      <div  class="nav-wrapper">
+  <div id="navbar" class="navbar-fixed ">
+    <nav class="nav-extended" class="" role="navigation">
+      <div class="nav-wrapper">
         <a id="brand-logo" class="brand-logo center " href="index.html"></a>
         <div id="botones">
           <center>
@@ -157,16 +159,32 @@
   <script src="js/init.js"></script>
   <script src="js/busca.js"></script>
   <script>
-   var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-60px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+    if ('serviceWorker' in navigator) {
+            console.log("El Navegador admite service workers");
+            window.addEventListener('load', function () {
+                //navigator.serviceWorker.register('sw_offlinepage.js')
+                //navigator.serviceWorker.register('sw_offlinesite.js')
+                navigator.serviceWorker.register('sw.js')
+
+                    .then(function (registration) {
+                        console.log('Service worker registrado de modo correcto');
+                        console.log('Scope: ' + registration.scope)
+                    }, function (error) {
+                        console.log('El registro del Service worker ha fallado');
+                        console.log(error)
+                    });
+            });
+        }
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-60px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
   </script>
 </body>
 
