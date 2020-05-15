@@ -1,11 +1,18 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-image: radial-gradient(circle at 34% 75%, rgba(49, 49, 49, 0.78) 0%, rgba(51, 50, 50, 0.78) 50%, rgba(59, 59, 59, 0.89) 50%, rgba(10, 10, 10, 0.89) 100%), radial-gradient(circle at 40% 51%, rgba(12, 12, 12, 0.84) 0%, rgba(12, 12, 12, 0.84) 50%, rgba(49, 48, 48, 0.62) 50%, rgba(49, 48, 48, 0.62) 100%), radial-gradient(circle at 50% 87%, rgba(14, 14, 14, 0.96) 0%, rgba(14, 14, 14, 0.96) 50%, rgba(12, 12, 12, 0.88) 50%, rgba(12, 12, 12, 0.88) 100%), linear-gradient(90deg, rgb(18, 18, 18), rgb(18, 18, 18));
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: fixed !important;
 }
 
 .card {
   border-radius: 10px;
   margin-bottom: 7.5%;
-  margin-bottom: 7.5%;
+  background-color: transparent !important;
+  border-color: rgb(136, 136, 136);
+  border-style: dashed;
+  border: 10px 10px 10px 10px;
 }
 
 .card-title {
@@ -13,11 +20,14 @@ body {
   font-weight: bold !important;
 }
 
+.card .card-content {
+  padding: 5px 24px 23px 24px !important;
+}
+
 .usado {
   pointer-events: none;
-  background-color: rgb(43, 43, 43) !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  /*   background-color: rgb(43, 43, 43) !important; */
+  background: linear-gradient(315deg, #020202, #5a5959) !important;
   cursor: default;
   transition: 1s ease-in-out;
 }
@@ -33,21 +43,22 @@ body {
 }
 
 .datos {
-  background-color: #311b92 !important;
+  /* background: linear-gradient(315deg, #2c05db, #5501b4)!important; */
+  border: 1.2px rgba(136, 136, 136, 0.596) dashed;
 }
 
 .tabs.tabs-transparent .tab a:hover, .tabs .tab a.active {
-  background-color: #1616165b !important;
+  background-color: #c7c7c71f !important;
   color: #fff !important;
 }
 
 .tabs.tabs-transparent .tab a {
-  color: #ffffffa9 !important;
+  color: #ffffff !important;
 }
 
 .tabs.tabs-transparent .indicator {
   height: 3px;
-  background-color: #000000 !important;
+  background-color: #ffffff !important;
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
@@ -55,6 +66,34 @@ body {
   box-shadow: none !important;
 }
 
-iframe{
+iframe {
   display: none;
+}
+
+.navbar-fixed nav {
+  background-image: linear-gradient(360deg, #00000042, #000000);
+}
+
+nav {
+  background-color: transparent;
+}
+
+.btn {
+  /* border:5px 5px 5px 5px;
+  border-color: rgb(119, 119, 119);
+  border-style: dashed; */
+  /* background: linear-gradient(45deg, #1a1a1a, #1f1f1f);
+  box-shadow: 6px -6px 18px #0f0f0f, -6px 6px 18px #2b2b2b; */
+  background: linear-gradient(315deg, #171e20, #1c2327);
+  box-shadow:  -11px -11px 6px #0a0d0e, 
+               11px 11px 6px #2a353a;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+
+#navbar {
+  transition: top 0.8s ease;
+  /* Transition effect when sliding down (and up) */
 }

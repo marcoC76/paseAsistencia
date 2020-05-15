@@ -37,10 +37,10 @@
       </div>
     </nav>
   </div> -->
-  <div class="navbar-fixed ">
-    <nav class="nav-extended" class="" role="navigation">
-      <div class="nav-wrapper grey darken-1 ">
-        <a id="brand-logo" class="brand-logo" href="index.html"></a>
+  <div id="navbar"  class="navbar-fixed ">
+    <nav  class="nav-extended" class="" role="navigation">
+      <div  class="nav-wrapper">
+        <a id="brand-logo" class="brand-logo center " href="index.html"></a>
         <div id="botones">
           <center>
             <a onclick="limpiar();periodo(1);" class="waves-effect waves-light btn black">1</a>
@@ -48,9 +48,9 @@
             <a onclick="limpiar();periodo(3);" class="waves-effect waves-light btn black">3</a>
           </center>
         </div>
-        
+
       </div>
-      <div class="nav-content grey darken-1" >
+      <div class="nav-content">
         <ul class="tabs tabs-transparent tabs-fixed-width">
           <li class="tab"><a href="#test1">A</a></li>
           <li class="tab"><a href="#test2">B</a></li>
@@ -65,35 +65,35 @@
   <br>
   <br>
 
- 
+
 
   <div id="contenido"></div>
-  
+
 
   <div id="test1" class="col s12 container">
     <div id="test_1" class="row">
 
     </div>
   </div>
-  
+
   <div id="test2" class="col s12 container">
     <div id="test_2" class="row">
 
     </div>
   </div>
-  
+
   <div id="test3" class="col s12 container">
     <div id="test_3" class="row">
 
     </div>
   </div>
-  
+
   <div id="test4" class="col s12 container">
     <div id="test_4" class="row">
 
     </div>
   </div>
-  
+
 
 
   <!-- <div class="container">
@@ -149,14 +149,25 @@
       <a class="waves-effect waves-light btn-large" href="https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec?Completo=Marco&Nick=NIM&Equipo=Chango&Grupo=A&ID=0002A&Fecha=2015-03-25T12:00:00Z" target="_blank"><i class="material-icons right" >cloud</i>Alumno 3</a> -->
   <!-- </div>
   </div> -->
-  
+
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/busca.js"></script>
-
+  <script>
+   var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-120px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+  </script>
 </body>
 
 </html>

@@ -36,8 +36,8 @@ function ft(appi) {
 
 
 function pintar() {
-    
-    
+
+
     lista = JSON.parse(localStorage.getItem("obj"));
     console.log(lista);
     var newArrayA = lista.filter(function (el) {
@@ -47,20 +47,20 @@ function pintar() {
     /* console.log(lista); */
     newArrayA.forEach(e => {
 
-        
+
         salidaA = salidaA + ` 
        <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
-                  <span class="card-title activator white-text">${e.COMPLETO}</span>
-                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
-                  <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span class="card-title white-text">${e.COMPLETO}</span>
+                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size:1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
+                  <!--<span style="border-radius: 10px;font-size: 0.8em; background: #5501b4; box-shadow: inset -30px -30px 60px #2b015c, inset 30px 30px 60px #7f01ff;" class="new badge blue left background: #5501b4; box-shadow: inset -30px -30px 60px #2b015c, inset 30px 30px 60px #7f01ff;" data-badge-caption="${e.NICK}"></span> -->
+                  <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
-                  <a id="${e.ID}-btn"  
+                  <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)"
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
-                     class="btn-floating halfway-fab waves-effect waves-black light-green">
+                     class="btn-floating halfway-fab waves-effect waves-black ">
                     <i id="${e.ID}-icon" 
                         class="material-icons" >
                         add
@@ -88,22 +88,24 @@ function pintar() {
 
         salidaB = salidaB + `
        <div class="col s12 m12 l6">
-              <div class="card sticky-action black">
+              <div  class="card sticky-action black" >
                 <div class="card-content">
-                  <span class="card-title activator white-text">${e.COMPLETO}</span>
-                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
+                
+                  <span class="card-title  white-text">${e.COMPLETO}</span>
+                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
-                  <a id="${e.ID}-btn"  
+                  <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)"
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
-                     class="btn-floating halfway-fab waves-effect waves-black light-green">
+                     class="btn-floating halfway-fab waves-effect waves-black">
                     <i id="${e.ID}-icon" 
                         class="material-icons" >
                         add
                     </i>
                 </a>
+                
                 </div>
                <!-- <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -129,15 +131,15 @@ function pintar() {
        <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
-                  <span class="card-title activator white-text">${e.COMPLETO}</span>
-                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
+                  <span class="card-title  white-text">${e.COMPLETO}</span>
+                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;  background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
-                  <a id="${e.ID}-btn"  
+                  <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)"
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
-                     class="btn-floating halfway-fab waves-effect waves-black light-green">
+                     class="btn-floating halfway-fab waves-effect waves-black ">
                     <i id="${e.ID}-icon" 
                         class="material-icons" >
                         add
@@ -172,14 +174,14 @@ function pintar() {
               <div class="card sticky-action black">
                 <div class="card-content">
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
-                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
+                  <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;  background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
-                  <a id="${e.ID}-btn"  
+                  <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)" 
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
-                     class="btn-floating halfway-fab waves-effect waves-black light-green">
+                     class="btn-floating halfway-fab waves-effect waves-black">
                     <i id="${e.ID}-icon" 
                         class="material-icons" >
                         add
@@ -201,25 +203,25 @@ function pintar() {
 }
 
 function periodo(num) {
-    
+
     if (num === 1) {
         appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
         url =
             "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
         document.getElementById("brand-logo").innerHTML = `Periodo 1`;
         ft(appi);
-       
-       
+
+
 
     } else if (num === 2) {
-        
+
         appi = "https://script.google.com/macros/s/AKfycbw87NkQkEsYqVCxJG4Peb78H03REvBrThoiLE04WQJ4bwhDxUJn/exec";
         url =
             "https://script.google.com/macros/s/AKfycbwYKAPn4uJiPDjdKNLZw3azVSngxxiaoAhFs4UHnUjXFPDevYk/exec";
 
         document.getElementById("brand-logo").innerHTML = `Periodo 2`;
         ft(appi);
-        
+
 
     } else if (num === 3) {
         appi = "https://script.google.com/macros/s/AKfycbwKs2Cs54-u_hpYg87lB50lO6SEct5DeHUr_BsTo4DGNZSgRIY/exec";
@@ -228,7 +230,7 @@ function periodo(num) {
 
         document.getElementById("brand-logo").innerHTML = `Periodo 3`;
         ft(appi);
-        
+
     }
 
 
@@ -287,5 +289,5 @@ function limpiar() {
     /* document.getElementById("test_2").innerHTML = "";
     document.getElementById("test_3").innerHTML = "";
     document.getElementById("test_4").innerHTML = ""; */
-    
+
 }
