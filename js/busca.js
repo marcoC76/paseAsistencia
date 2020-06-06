@@ -20,28 +20,13 @@ function ft(appi) {
 
     fetch(appi)
         .then(function (response) {
-            document.getElementById("contenido").innerHTML = `
-            <center>
-            <br>
-            <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-white-only">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div><div class="gap-patch">
-                <div class="circle"></div>
-              </div><div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-          </center>`;
             return response.json();
         })
         .then(function (data) {
             obj = data;
             localStorage.setItem("obj", JSON.stringify(obj));
             console.log("Se solicito la info");
-            document.getElementById("contenido").innerHTML = ``;
+            limpiarContenido();
             pintar();
         })
         .catch(function (err) {
@@ -63,12 +48,15 @@ function pintar() {
     /*  console.log(newArrayA); */
     /* console.log(lista); */
     newArrayA.forEach(e => {
-
+        var porciento = (e.ASISTENCIAS*100)/16;
 
         salidaA = salidaA + ` 
        <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
+                <div class="progress">
+                        <div class="determinate" style="width: ${porciento}%"></div>
+                    </div>
                   <span class="card-title white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size:1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em; background: #5501b4; box-shadow: inset -30px -30px 60px #2b015c, inset 30px 30px 60px #7f01ff;" class="new badge blue left background: #5501b4; box-shadow: inset -30px -30px 60px #2b015c, inset 30px 30px 60px #7f01ff;" data-badge-caption="${e.NICK}"></span> -->
@@ -101,13 +89,15 @@ function pintar() {
     /* console.log(newArray); */
     /* console.log(lista); */
     newArrayB.forEach(e => {
-
+        var porciento = (e.ASISTENCIAS*100)/16;
 
         salidaB = salidaB + `
        <div class="col s12 m12 l6">
               <div  class="card sticky-action black" >
                 <div class="card-content">
-                
+                <div class="progress">
+                        <div class="determinate" style="width: ${porciento}%"></div>
+                    </div>
                   <span class="card-title  white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
@@ -143,11 +133,15 @@ function pintar() {
     /* console.log(lista); */
     newArrayC.forEach(e => {
 
+        var porciento = (e.ASISTENCIAS*100)/16;
 
         salidaC = salidaC + `
        <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
+                <div class="progress">
+                        <div class="determinate" style="width: ${porciento}%"></div>
+                    </div>
                   <span class="card-title  white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;  background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
@@ -162,8 +156,8 @@ function pintar() {
                         add
                     </i>
                     
+                    
                 </a>
-              
                 </div>
                 
                <!-- <div class="card-reveal">
@@ -185,11 +179,14 @@ function pintar() {
     /* console.log(lista); */
     newArrayD.forEach(e => {
 
-
+        var porciento = (e.ASISTENCIAS*100)/16;
         salidaD = salidaD + `
        <div class="col s12 m12 l6">
               <div class="card sticky-action black">
                 <div class="card-content">
+                <div class="progress">
+                        <div class="determinate" style="width: ${porciento}%"></div>
+                    </div>
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;  background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
                   <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
@@ -218,6 +215,25 @@ function pintar() {
 
     console.log("Se pinto la info");
 }
+
+var loader = function () {
+    document.getElementById("contenido").innerHTML = `
+            <center>
+            <br>
+            <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-white-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          </center>`;
+}
+
 
 function periodo(num) {
 
@@ -336,8 +352,12 @@ function getLogoffTime() {
 
 function limpiar() {
     document.getElementById("botones").innerHTML = "";
-    /* document.getElementById("test_2").innerHTML = "";
-    document.getElementById("test_3").innerHTML = "";
-    document.getElementById("test_4").innerHTML = ""; */
+    document.getElementById('swt').style.display = "inline";
+}
 
+var arriba = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }

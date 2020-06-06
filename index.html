@@ -18,27 +18,7 @@
 </head>
 
 <body>
-  <!-- <div class="navbar-fixed ">
-    <nav style="border-radius: 0 0 90px 0px; width: 90px;" class="grey darken-1 z-depth-3" role="navigation">
-      <div class="nav-wrapper container">
-        <ul class="right hide-on-med-and-down">
-          <li><a>Mundo 1</a></li>
-          <li><a>Mundo 2</a></li>
-          <li><a>Mundo 3</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Navbar Link</a></li>
-          <li><a href="#">Mundo 1</a></li>
-          <li><a href="#">Mundo 2</a></li>
-          <li><a href="#">Mundo 3</a></li>
-        </ul>
-       
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons ">menu</i></a>
-          
-      </div>
-    </nav>
-  </div> -->
+ 
   <div id="navbar" class="navbar-fixed ">
     <nav class="nav-extended" class="" role="navigation">
       <div class="nav-wrapper">
@@ -46,19 +26,19 @@
 
         <div id="botones">
           <center>
-            <a onclick="limpiar();periodo(1);" class="waves-effect waves-light btn black">1</a>
-            <a onclick="limpiar();periodo(2);" class="waves-effect waves-light btn black">2</a>
-            <a onclick="limpiar();periodo(3);" class="waves-effect waves-light btn black">3</a>
+            <a onclick="limpiar();periodo(1);loader();" class="waves-effect waves-light btn black">1</a>
+            <a onclick="limpiar();periodo(2);loader();" class="waves-effect waves-light btn black">2</a>
+            <a onclick="limpiar();periodo(3);loader();" class="waves-effect waves-light btn black">3</a>
           </center>
         </div>
 
       </div>
       <div id="swp" class="nav-content">
         <ul class="tabs tabs-transparent tabs-fixed-width">
-          <li class="tab"><a href="#test1">A</a></li>
-          <li class="tab"><a href="#test2">B</a></li>
-          <li class="tab"><a href="#test3">C</a></li>
-          <li class="tab"><a href="#test4">D</a></li>
+          <li class="tab"><a href="#test1" onclick="arriba();">A</a></li>
+          <li class="tab"><a href="#test2" onclick="arriba();">B</a></li>
+          <li class="tab"><a href="#test3" onclick="arriba();">C</a></li>
+          <li class="tab"><a href="#test4" onclick="arriba();">D</a></li>
         </ul>
       </div>
     </nav>
@@ -68,18 +48,7 @@
   <br>
   <br>
 
-  <center>
-    <div class="switch">
-      <label>
-        1 
-      <input type="checkbox" onclick="if(this.checked){doble(1)}else{doble(0)}">
-        <span class="lever"></span>
-        2
-      </label>
-    </div>
-    
-
-  </center>
+  
   <div id="contenido"></div>
 
 
@@ -109,7 +78,18 @@
 
 
 
-  
+  <center>
+    
+    <div id="swt" class="switch">
+      <label class="swtLabel">
+        1 
+      <input type="checkbox" onclick="if(this.checked){doble(1)}else{doble(0)}">
+        <span class="lever"></span>
+        2
+      </label>
+    </div>
+
+  </center>
 
 
   <!--  Scripts-->
