@@ -107,10 +107,10 @@ nav {
   bottom: -5%;
   width: 30%;
   height: 9%;
-  right: -1%;
+  left: -1%;
   z-index: 1;
   display: none;
-  border-radius: 25px 0px 0px 0px;  
+  border-radius: 0px 25px 0px 0px;  
 }
 .switch {
   margin: 15px 0; 
