@@ -3,11 +3,8 @@ html {
 }
 
 body {
-  
   background-color: #000000;
-  
   min-height: 100vh;
- 
 }
 
 .card {
@@ -30,7 +27,6 @@ body {
 
 .usado {
   pointer-events: none;
-  
   background: linear-gradient(315deg, #020202, #5a5959) !important;
   cursor: default;
   transition: 1s ease-in-out;
@@ -47,7 +43,6 @@ body {
 }
 
 .datos {
-  
   border: 1.2px rgba(136, 136, 136, 0.596) dashed;
 }
 
@@ -75,7 +70,6 @@ iframe {
 }
 
 .navbar-fixed nav {
-  
   background-color: #000000;
 }
 
@@ -84,7 +78,6 @@ nav {
 }
 
 .btn {
-  
   background: linear-gradient(315deg, #171e20, #1c2327);
   box-shadow: -11px -11px 6px #0a0d0e, 11px 11px 6px #2a353a;
   font-size: 1.5em;
@@ -95,27 +88,26 @@ nav {
 
 #navbar {
   transition: top 0.8s ease;
-  
 }
 
 /* switch */
-#swt{
+
+#swt {
   background: linear-gradient(315deg, #020202ee, #3a3a3a) !important;
   box-shadow: -5px -5px 10px #afafaf17, 11px 11px 6px #3f3f3f00;
-  
   position: fixed;
   bottom: -5%;
-  width: 30%;
+  width: 100%;
   height: 9%;
-  left: -1%;
+  left: 0;
   z-index: 1;
   display: none;
-  border-radius: 0px 25px 0px 0px;  
-}
-.switch {
-  margin: 15px 0; 
+  border-radius: 25px 25px 0px 0px;
 }
 
+.switch {
+  margin: 15px 0;
+}
 
 .switch>label {
   font-size: 2em;
@@ -127,8 +119,8 @@ nav {
   left: -10%;
   width: 30px;
   height: 30px;
-
 }
+
 .switch label .lever::before {
   background: linear-gradient(315deg, #fdfdfd62, #57575762)!important;
 }
@@ -149,24 +141,23 @@ nav {
 .switch label input[type=checkbox]:checked+.lever:after {
   background: linear-gradient(315deg, #ffffff, #474747)!important;
   left: 60%;
-  
 }
 
-.switch label input[type=checkbox]:checked+.lever::before{
+.switch label input[type=checkbox]:checked+.lever::before {
   left: 60%;
-} 
+}
 
 .spinner-white-only {
   border-color: #fbfcff!important;
 }
 
-.progress{
+.progress {
   width: 50%;
   margin-top: 2%;
   background-color: rgba(255, 255, 255, 0.658);
 }
 
-.determinate{
+.determinate {
   background-color: rgba(90, 90, 90, 0.795) !important;
 }
 
