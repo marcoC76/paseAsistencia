@@ -5,6 +5,7 @@ var salidaC = '';
 var salidaD = '';
 var valor;
 var lista;
+var dobleAsistencia = 0;
 var appi; /*  = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec"; */
 
 var url;
@@ -19,12 +20,28 @@ function ft(appi) {
 
     fetch(appi)
         .then(function (response) {
+            document.getElementById("contenido").innerHTML = `
+            <center>
+            <br>
+            <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-white-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          </center>`;
             return response.json();
         })
         .then(function (data) {
             obj = data;
             localStorage.setItem("obj", JSON.stringify(obj));
             console.log("Se solicito la info");
+            document.getElementById("contenido").innerHTML = ``;
             pintar();
         })
         .catch(function (err) {
@@ -238,6 +255,10 @@ function periodo(num) {
 
 }
 
+var doble = function (e) {
+    dobleAsistencia = e;
+}
+
 function envia(c, n, e, g, i, a) {
 
     var fecha = new Date();
@@ -256,16 +277,45 @@ function envia(c, n, e, g, i, a) {
 
     /* console.log(envioUrl); */
 
+    enviaDatos(envioUrl);
 
+
+    /*  var iframe = document.createElement('iframe');
+
+     iframe.src = envioUrl;
+     document.getElementById("contenido").appendChild(iframe);
+     
+     setTimeout('limpiarContenido()', 3000); */
+
+    document.getElementById(i + "-btn").className += " usado";
+    document.getElementById(i + "-icon").innerHTML = "check";
+    document.getElementById(i + "-icon").style.color = "#18f018";
+    if (dobleAsistencia == 1) {
+        setTimeout('enviaDatos(envioUrl);', 1000);
+        document.getElementById(i + "-asi").setAttribute('data-badge-caption', parseInt(a) + 2);
+        M.toast({
+            html: 'Asistencias registrada',
+            classes: 'rounded',
+            displayLength: '1000'
+        })
+    } else {
+        document.getElementById(i + "-asi").setAttribute('data-badge-caption', parseInt(a) + 1);
+        M.toast({
+            html: 'Asistencia registrada',
+            classes: 'rounded',
+            displayLength: '1000'
+        })
+    }
+}
+
+var enviaDatos = function (envioUrl) {
     var iframe = document.createElement('iframe');
 
     iframe.src = envioUrl;
     document.getElementById("contenido").appendChild(iframe);
+
     setTimeout('limpiarContenido()', 3000);
-    document.getElementById(i + "-btn").className += " usado";
-    document.getElementById(i + "-icon").innerHTML = "check";
-    document.getElementById(i + "-icon").style.color = "#18f018";
-    document.getElementById(i + "-asi").setAttribute('data-badge-caption', parseInt(a) + 1);;
+
 }
 
 var limpiarContenido = function () {

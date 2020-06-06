@@ -43,6 +43,7 @@
     <nav class="nav-extended" class="" role="navigation">
       <div class="nav-wrapper">
         <a id="brand-logo" class="brand-logo center " href="index.html"></a>
+
         <div id="botones">
           <center>
             <a onclick="limpiar();periodo(1);" class="waves-effect waves-light btn black">1</a>
@@ -67,8 +68,18 @@
   <br>
   <br>
 
+  <center>
+    <div class="switch">
+      <label>
+        1 
+      <input type="checkbox" onclick="if(this.checked){doble(1)}else{doble(0)}">
+        <span class="lever"></span>
+        2
+      </label>
+    </div>
+    
 
-
+  </center>
   <div id="contenido"></div>
 
 
@@ -98,59 +109,7 @@
 
 
 
-  <!-- <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col s12">
-          <ul class="tabs">
-            <li class="tab col s3"><a href="#test1">A</a></li>
-            <li class="tab col s3"><a href="#test2">B</a></li>
-            <li class="tab col s3"><a href="#test3">C</a></li>
-            <li class="tab col s3"><a href="#test4">D</a></li>
-          </ul>
-        </div>
-        <div id="test1" class="col s12">A</div>
-        <div id="test2" class="col s12">B</div>
-        <div id="test3" class="col s12">C</div>
-        <div id="test4" class="col s12">D</div>
-      </div> -->
-  <!--   Icon Section   -->
-  <!-- <div id="lista" class="row">
-
-        <div class="col s12 m6 l6">
-          <div class="card sticky-action black">
-            <div class="card-content">
-              <span class="card-title activator white-text">xxxxxxx xxxxxxxx xxxxxx xxxxxx<i
-                  class="material-icons right">more_vert</i></span>
-              <span style="border-radius: 10px;font-size: 1em;font-weight: bold;" class="new badge grey left "
-                data-badge-caption="x"></span>
-              <span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left"
-                data-badge-caption="xxxxx">Nick:</span>
-              <span style="border-radius: 10px;font-size: 0.8em;" class="new badge red left"
-                data-badge-caption="xxxxx">Clan:</span>
-              <span style="border-radius: 10px;font-size: 0.8em;" class="new badge orange left"
-                data-badge-caption="xxxxY"></span>
-              <br>
-              <a class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">add</i></a>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-
-            </div>
-          </div>
-        </div>
-
-
-
-      </div> -->
-
-
-
-  <!-- <a class="waves-effect waves-light btn-large" href="https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec?Completo=Marco&Nick=NIM&Equipo=Chango&Grupo=A&ID=0000A&Fecha=2015-03-25T12:00:00Z" target="_blank" >Alumno 1</a>
-      <a class="waves-effect waves-light btn-large" href="https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec?Completo=Marco&Nick=NIM&Equipo=Chango&Grupo=A&ID=0001A&Fecha=2015-03-25T12:00:00Z" target="_blank"><i class="material-icons left">cloud</i>Alumno 2</a>
-      <a class="waves-effect waves-light btn-large" href="https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec?Completo=Marco&Nick=NIM&Equipo=Chango&Grupo=A&ID=0002A&Fecha=2015-03-25T12:00:00Z" target="_blank"><i class="material-icons right" >cloud</i>Alumno 3</a> -->
-  <!-- </div>
-  </div> -->
+  
 
 
   <!--  Scripts-->
@@ -160,21 +119,21 @@
   <script src="js/busca.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
-            console.log("El Navegador admite service workers");
-            window.addEventListener('load', function () {
-                //navigator.serviceWorker.register('sw_offlinepage.js')
-                //navigator.serviceWorker.register('sw_offlinesite.js')
-                navigator.serviceWorker.register('sw.js')
+      console.log("El Navegador admite service workers");
+      window.addEventListener('load', function () {
+        //navigator.serviceWorker.register('sw_offlinepage.js')
+        //navigator.serviceWorker.register('sw_offlinesite.js')
+        navigator.serviceWorker.register('sw.js')
 
-                    .then(function (registration) {
-                        console.log('Service worker registrado de modo correcto');
-                        console.log('Scope: ' + registration.scope)
-                    }, function (error) {
-                        console.log('El registro del Service worker ha fallado');
-                        console.log(error)
-                    });
-            });
-        }
+          .then(function (registration) {
+            console.log('Service worker registrado de modo correcto');
+            console.log('Scope: ' + registration.scope)
+          }, function (error) {
+            console.log('El registro del Service worker ha fallado');
+            console.log(error)
+          });
+      });
+    }
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
