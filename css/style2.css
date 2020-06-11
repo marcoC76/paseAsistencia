@@ -103,6 +103,7 @@ margin-left: 25%;
   z-index: 1;
   display: none; 
 transition:bottom 1s ease;
+border-radius: 50px;
 
 }
 
