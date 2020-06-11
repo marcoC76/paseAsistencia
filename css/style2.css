@@ -94,6 +94,7 @@ nav {
 
 #swt {
   background: black; 
+margin: 0 auto; 
   position: fixed;
   bottom: -5%;
   width: 80%;
