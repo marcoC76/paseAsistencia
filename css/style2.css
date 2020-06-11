@@ -96,12 +96,12 @@ nav {
   background: black; 
   position: fixed;
   bottom: -5%;
-  width: 100%;
+  width: 80%;
   height: 9%;
   left: 0;
   z-index: 1;
   display: none; 
-transition: top 0.8s ease;
+transition:bottom 1s ease;
 
 }
 
