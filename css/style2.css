@@ -93,10 +93,12 @@ nav {
 /* switch */
 
 #swt {
-  background: black; 
+display: flex;
+  justify-content: center;
+  background: #010101; 
   position: fixed;
   bottom: -5%;
-  width: 100%;
+  width: 50%;
   height: 9%;
   left: 0;
   z-index: 1;
