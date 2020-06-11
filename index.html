@@ -118,8 +118,10 @@
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
+        document.getElementById("swt").style.bottom = "0";
       } else {
         document.getElementById("navbar").style.top = "-60px";
+        document.getElementById("swt").style.bottom = "-60px";
       }
       prevScrollpos = currentScrollPos;
     }
