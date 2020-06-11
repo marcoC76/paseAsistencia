@@ -59,9 +59,9 @@ function pintar() {
                     </div>
                   <span class="card-title white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size:1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
-                  <!--<span style="border-radius: 10px;font-size: 0.8em; background: #5501b4; box-shadow: inset -30px -30px 60px #2b015c, inset 30px 30px 60px #7f01ff;" class="new badge blue left background: #5501b4; box-shadow: inset -30px -30px 60px #2b015c, inset 30px 30px 60px #7f01ff;" data-badge-caption="${e.NICK}"></span> -->
-                  <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                
+                  <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class=" new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="identificador new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
                   <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)"
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
@@ -100,9 +100,9 @@ function pintar() {
                     </div>
                   <span class="card-title  white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
-                  <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
+                 
                   <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="identificador new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
                   <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)"
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
@@ -144,9 +144,9 @@ function pintar() {
                     </div>
                   <span class="card-title  white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;  background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
-                  <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
+                  
                   <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="identificador new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
                   <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)"
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
@@ -189,9 +189,9 @@ function pintar() {
                     </div>
                   <span class="card-title activator white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size: 1em;font-weight: bold;  background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
-                  <!--<span style="border-radius: 10px;font-size: 0.8em;" class="new badge blue left" data-badge-caption="${e.NICK}"></span> -->
+                  
                   <span style="border-radius: 10px;font-size: 1em; background: #1403b1; box-shadow: inset -16px -16px 28px #090151, inset 16px 16px 28px #1f05ff;" class="new badge datos left" data-badge-caption="${e.EQUIPO}"></span>
-                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="new badge datos left" data-badge-caption="${e.ID}"></span>
+                  <span style="border-radius: 10px;font-size: 1em; background: background: #5501b4; box-shadow: inset -16px -16px 28px #270053, inset 16px 16px 28px #8302ff;" class="identificador new badge datos left" data-badge-caption="${e.ID}"></span>
                   <br>
                   <a id="${e.ID}-btn"  style="background: linear-gradient(315deg, #20e007, #075500)" 
                      onclick="envia('${e.COMPLETO}','${e.NICK}','${e.EQUIPO}','${e.GRUPO}','${e.ID}','${e.ASISTENCIAS}');" 
@@ -241,7 +241,7 @@ function periodo(num) {
         appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
         url =
             "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
-        document.getElementById("brand-logo").innerHTML = `Periodo 1`;
+        document.getElementById("brand-logo").innerHTML = `<div class="left"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center " > Periodo 1</span>`;
         ft(appi);
 
 
@@ -312,14 +312,14 @@ function envia(c, n, e, g, i, a) {
         M.toast({
             html: 'Asistencias registrada',
             classes: 'rounded',
-            displayLength: '1000'
+            displayLength: '2000'
         })
     } else {
         document.getElementById(i + "-asi").setAttribute('data-badge-caption', parseInt(a) + 1);
         M.toast({
             html: 'Asistencia registrada',
             classes: 'rounded',
-            displayLength: '1000'
+            displayLength: '2000'
         })
     }
 }
