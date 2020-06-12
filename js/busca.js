@@ -241,7 +241,7 @@ function periodo(num) {
         appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
         url =
             "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
-        document.getElementById("brand-logo").innerHTML = `<div class="left"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center " > Periodo 1</span>`;
+        document.getElementById("brand-logo").innerHTML = `<div class="left"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center "> Periodo 1</span>`;
         ft(appi);
 
 
@@ -252,7 +252,7 @@ function periodo(num) {
         url =
             "https://script.google.com/macros/s/AKfycbwYKAPn4uJiPDjdKNLZw3azVSngxxiaoAhFs4UHnUjXFPDevYk/exec";
 
-        document.getElementById("brand-logo").innerHTML = `Periodo 2`;
+        document.getElementById("brand-logo").innerHTML = `<div class="left"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center "> Periodo 2</span>`;
         ft(appi);
 
 
@@ -261,7 +261,7 @@ function periodo(num) {
         url =
             "https://script.google.com/macros/s/AKfycbz2gNe8rtLII0sRg9h7SCRHjvMBEokiwa89e4h-wnc2ovLioys/exec";
 
-        document.getElementById("brand-logo").innerHTML = `Periodo 3`;
+        document.getElementById("brand-logo").innerHTML = `<div class="left"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center "> Periodo 3</span>`;
         ft(appi);
 
     }
