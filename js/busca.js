@@ -361,3 +361,36 @@ var arriba = function () {
         behavior: 'smooth'
     });
 }
+
+if (!navigator.onLine) {
+    console.log("No hay internet");
+    var internet = `
+  
+      <span >
+          SIN CONEXIÓN
+      </span>
+      <br>
+      <span >
+            SIN CONEXIÓN
+      </span>
+      <br>
+      <span >
+            SIN CONEXIÓN
+      </span>
+      <br>
+      <span >
+            SIN CONEXIÓN
+      </span>
+      <br>
+      <span >
+            SIN CONEXIÓN
+      </span>
+      <br>
+      <span >
+            SIN CONEXIÓN
+      </span>
+    
+`;
+document.getElementById("footer").innerHTML = internet;
+document.getElementById("footer").style.display = "block";
+}
