@@ -11,9 +11,9 @@ body {
   border-radius: 10px;
   margin-bottom: 7.5%;
   background-color: transparent !important;
-  border-color: rgb(136, 136, 136);
+ /* border-color: rgb(136, 136, 136);
   border-style: dashed;
-  border: 10px 10px 10px 10px;
+  border: 10px 10px 10px 10px;*/
 }
 
 .card-title {
