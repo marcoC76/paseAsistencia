@@ -55,7 +55,7 @@ function pintar() {
               <div class="card sticky-action black">
                 <div class="card-content">
                 <div class="progress">
-                        <div class="determinate" style="width: ${porciento}%"></div>
+                        <div class="determinate b" style="width: ${porciento}%"></div>
                     </div>
                   <span class="card-title white-text">${e.COMPLETO}</span>
                   <span id="${e.ID}-asi" style="border-radius: 10px;font-size:1em;font-weight: bold; background: #455a64; box-shadow: inset -9px -9px 18px #1c2428, inset 9px 9px 18px #6e90a0;" class="new badge" data-badge-caption="${e.ASISTENCIAS}"></span>
@@ -241,7 +241,7 @@ function periodo(num) {
         appi = "https://script.google.com/macros/s/AKfycbzloNhYKVTnxaE8XRAoHceu6bDqug-4_qPck6wHR5nC0hMZ4ac/exec";
         url =
             "https://script.google.com/macros/s/AKfycbz3a3hAA9kMxh9UDNOylK6L1Uue-iJYwyay2EikT6mLU413MxY/exec";
-        document.getElementById("brand-logo").innerHTML = `<div class="left"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center "> Periodo 1</span>`;
+        document.getElementById("brand-logo").innerHTML = `<div class="left waves-effect waves-light"><a href="index.html"><i class="material-icons white-text">arrow_back</i></a></div><span  class="brand-logo center "> Periodo 1</span>`;
         ft(appi);
 
 
